@@ -220,10 +220,10 @@ section{
 }
 
 .about .about-content{
-    background-color: rgba(211, 211, 211, 0.801);
+    background-color: rgba(219, 214, 214, 0.281);
     padding: 2%;
     border-radius: 10px;
-    box-shadow: 0 5px 20px 2px;
+    box-shadow: 0 5px 20px 1px;
 }
 
 .about .title i,.services .title i,.skills .title i,.contact .title i{
