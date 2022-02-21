@@ -219,11 +219,15 @@ section{
     padding: 100px 0;
 }
 
+.about,.skills{
+    background: url("photos/White_Background_generated.jpg") no-repeat center;
+    background-size: cover;
+}
+
 .about .about-content{
-    background-color: rgba(219, 214, 214, 0.281);
-    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5%;
     border-radius: 10px;
-    box-shadow: 0 5px 20px 1px;
 }
 
 .about .title i,.services .title i,.skills .title i,.contact .title i{
@@ -269,8 +273,8 @@ section{
 
 .about .about-content .left .indicator span{
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin: auto 5px ;
     border-radius: 50%;
     background:rgba(255, 255,255, 0.6);
@@ -278,7 +282,7 @@ section{
 }
 
 .about .about-content .left .indicator span.active{
-    background: white;
+    background: rgb(199, 199, 199);
 }
 
 
@@ -292,7 +296,7 @@ section{
 
 .about .about-content .right{
     text-align: justify;
-    width:55%
+    width:55%;
 }
 
 .about .about-content .right .text{
@@ -865,6 +869,18 @@ footer span span{
     .services .services-content .card{
         width: calc(100% - 5px);
         margin-bottom: 20px;
+    }
+
+    .about .about-content .left .slider-box{
+        height: 310px;
+        width: 300px;
+    }
+
+    .about .about-content .left  #slider .profile{
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+
     }
 }
 
