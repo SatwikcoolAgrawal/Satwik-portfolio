@@ -7,6 +7,8 @@
     text-decoration: none;
 }
 
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -225,8 +227,8 @@ section{
 }
 
 .about .about-content{
-    background-color: rgb(255, 255, 255);
-    padding: 1.5%;
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 2%;
     border-radius: 10px;
 }
 
@@ -308,6 +310,10 @@ section{
 .about .about-content .right .text span{
     color: crimson;
     text-transform:uppercase;
+}
+
+.about .about-content .right .text .linebreak{
+    display: none;
 }
 
 .about .about-content .right  a{
@@ -471,6 +477,7 @@ section{
     width: 90%;
     
 }
+
 .skills .skills-content .right .python::before{
     width: 75%;
 }
@@ -720,7 +727,7 @@ footer span span{
 
     .navbar .menu{
         position: fixed;
-        height: 100vh;
+        height: 100%;
         width: 50%;
         right:-100%;
         top: 0;
@@ -741,7 +748,7 @@ footer span span{
 
     .navbar .menu li a{
         display: inline-block;
-        margin: 20px 0;
+        margin: 25px 0;
         font-size: 25px;
     }
 
@@ -880,7 +887,15 @@ footer span span{
         height: 300px;
         width: 300px;
         object-fit: cover;
-
     }
+
+    .about .about-content .right .text{
+        text-align: center;
+    }
+
+    .about .about-content .right .text .linebreak{
+        display: block;
+    }
+    
 }
 
