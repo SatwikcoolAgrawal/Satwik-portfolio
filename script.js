@@ -13,6 +13,14 @@ $(document).ready(function () {
             $('.scroll-up').removeClass("show");
         }
     });
+
+    // loader
+    var loader = document.getElementById("loader");
+
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    });
+
     // scroll-up
     $('.scroll-up').click(function () {
         $('html').animate({ scrollTop: 0 });
