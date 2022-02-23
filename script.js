@@ -22,8 +22,8 @@ $(document).ready(function () {
 
     var typed = new Typed(".typed", {
         strings: ["Developer", "Artist", "Designer", "Technophile"],
-        typeSpeed: 90,
-        backSpeed: 30,
+        typeSpeed: 100,
+        backSpeed: 60,
         loop: true
     });
 
@@ -42,11 +42,21 @@ $(document).ready(function () {
     });
 
     // read more button
-
+    var b = true;
     $('.skills .skills-content .left a').click(function () {
         $('.skills .skills-content .left p span').toggleClass("active");
-        $('.skills .skills-content .left a').toggleClass("active");
+        if (b) {
+            $('.skills .skills-content .left a').text('Read Less');
+            b = false;
+        }
+        else {
+            $('.skills .skills-content .left a').text('Read More');
+            b = true;
+        }
+
     });
+
+
 
     // profile sliding
 
@@ -54,6 +64,35 @@ $(document).ready(function () {
     var btn1 = document.getElementById("btn1");
     var btn2 = document.getElementById("btn2");
     var btn3 = document.getElementById("btn3");
+    var len = slide.getElementsByClassName("profile").length;
+    var count = 1;
+    // automatic profile sliding
+    var nextSlide = function () {
+        if (count < len) {
+            slide.style.transform = "translateX(" + -33.33 * count + "%)";
+            $("#btn2").removeClass("active");
+            $("#btn1").removeClass("active");
+            $("#btn3").removeClass("active");
+            count++;
+            $("#btn" + count).addClass("active");
+
+        }
+        else if (count = len) {
+            slide.style.transform = "translateX(0px)";
+            $("#btn2").removeClass("active");
+            $("#btn1").removeClass("active");
+            $("#btn3").removeClass("active");
+            count = 1;
+            $("#btn" + count).addClass("active");
+
+        }
+    }
+
+    setInterval(function () {
+        nextSlide();
+    }, 7000);
+
+    // manual sliding
 
     btn1.onclick = function () {
         slide.style.transform = "translateX(0px)";
@@ -74,6 +113,5 @@ $(document).ready(function () {
         $("#btn2").removeClass("active");
         $("#btn1").removeClass("active");
     }
-
 
 });
