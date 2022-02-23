@@ -15,11 +15,6 @@ $(document).ready(function () {
     });
 
     // loader
-    var loader = document.getElementById("loader");
-
-    window.addEventListener("load", function () {
-        loader.style.display = "none";
-    });
 
     // scroll-up
     $('.scroll-up').click(function () {
