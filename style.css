@@ -819,6 +819,17 @@ footer span span{
         object-fit: cover;
 
     }
+
+
+    @media (max-height: 470px){
+        .navbar .menu{
+            padding-top: 40px;
+        }
+        
+        .navbar .menu li a{
+            margin: 15px 0;
+        }
+    }
 }
 
   
