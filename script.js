@@ -16,6 +16,11 @@ $(document).ready(function () {
 
     // loader
 
+    setTimeout(function () {
+        $('.preloader').addClass('loaded');
+    }, 3000);
+
+
     // scroll-up
     $('.scroll-up').click(function () {
         $('html').animate({ scrollTop: 0 });
