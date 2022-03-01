@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('.preloader').addClass('loaded');
-    }, 3000);
+    }, 2500);
 
 
     // scroll-up
