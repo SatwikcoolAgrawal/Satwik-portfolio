@@ -113,6 +113,7 @@ html{
     font-family: 'Monoton',display ;
 }
 .navbar .logo a span{
+    font-size:33px;
     color: crimson;
     transition: all 0.3s ease;
 }
@@ -213,20 +214,24 @@ html{
 
 .home .home-content a{
     display: inline-block;
-    background: crimson;
     color: white;
-    font-size: 1.3em;
-    padding: 12px 36px;
+    background: crimson;
+    font-size: 1.5em;
+    padding: 8px 13px;
     margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
+    margin-right: 2.5em;
+    border:  2px solid crimson;
+    border-radius: 50%;
     transition: all 0.3s ease;
+}
+
+.home .home-content a i{
+    font-size: 1.6em;
 }
 
 .home .home-content a:hover{
     color:crimson;
     background: none;
-    
 }
 
 /* general styling */
@@ -378,6 +383,30 @@ section{
     text-transform:uppercase;
 }
 
+.about .about-content .right .text span::after{
+    content: "";
+    animation: profess 1s ease infinite ;
+}
+
+
+@keyframes profess{
+    0%{
+        content: "Developer";
+    }
+    40%{
+        content: "Artist" ;
+    }
+    70%{
+        content: "Designer";
+    }
+    100% { content: "Technophile";
+    }
+}
+
+
+
+
+
 .about .about-content .right .text .linebreak{
     display: none;
 }
@@ -389,10 +418,22 @@ section{
     font-size: 1em;
     padding: 10px 30px;
     margin-top: 20px;
+    margin-right: 30px;
     border-radius: 6px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
     
+}
+
+.about .about-content .right .myids{
+    display: inline-block;
+}
+
+.about .about-content .right .myid{
+    font-size: 1.5em;
+    margin-right: 30px;
+    padding: 6px 14px;
+    border-radius: 50%;
 }
 
 .about .about-content .right  a:hover{
@@ -835,8 +876,8 @@ footer span span{
     }
 
     .home .home-content a{
-        font-size: 1em;
-        padding: 8px 25px;
+        font-size: 1.3em;
+        margin-right: 2em;
     }
 
     

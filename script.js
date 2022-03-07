@@ -35,14 +35,6 @@ $(document).ready(function () {
         loop: true
     });
 
-
-    var typed = new Typed(".typed-2", {
-        strings: ["Developer", "Artist", "Designer", "Technophile"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
     // toggle menu
     $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
