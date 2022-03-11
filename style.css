@@ -550,6 +550,19 @@ section{
     margin-bottom: 15px;
 }
 
+.skills .skills-content .right .bars:hover{
+    transform: scale(1.05);
+}
+
+.skills .skills-content .right .bars:hover span{
+    font-weight: 600;
+}
+
+
+.skills .skills-content .right .bars:hover .line::before{
+    background: rgb(252, 2, 52);
+}
+
 .skills .skills-content .right .bars .info{
     display: flex;
     margin-bottom: 5px;
@@ -640,11 +653,12 @@ section{
     text-align: justify ;
 }
 
-.contact .contact-content .left icons{
+.contact .contact-content .left .icons{
     margin: 10px 0;
 }
 
 .contact .contact-content .row{
+    margin: 8px 0px;
     display: flex;
     height: 65px;
     align-items: center ;
@@ -677,7 +691,7 @@ section{
 }
 
 .contact .right form .textarea{
-    height: 80px;
+    height: 100px;
     width: 100%;
 }
 
