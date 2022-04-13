@@ -255,10 +255,10 @@
                 </div>
                 <div class="column right">
                     <div class="txt">Message Me!</div>
-                    <form>
+                    <form action="javascript:sendEmail()" method="post">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" id="name" class="name" placeholder="Full Name" name="name" required>
+                                <input type="text" id="Name" class="Name" placeholder="Full Name" name="name" required>
                             </div>
                             <div class="field email">
                                 <input type="email" id="e-mail" class="e-mail" placeholder="E-mail" name="email"
@@ -281,14 +281,14 @@
         </div>
     </section>
 
-    <div class="pop-up" id="pop-up">
+    <!-- <div class="pop-up" id="pop-up">
         <div class="pop-content" id="pop-content">
             <h2 class="head">!! Thank you !!</h2>
             <hr>
             <p class="pop-txt">Message Sent Successfully. We will get in touch soon</p>
             <button class="close" id="close">Okay</button>
         </div>
-    </div>
+    </div> -->
 
     <!-- footer-section -->
 
@@ -297,7 +297,40 @@
                 class="far fa-copyright"></span>2022 All rights reserved.</span>
     </footer>
 
-    <script src=" script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // sending email through contact form 
+        function sendEmail() {
+            var nm = document.getElementById("Name").value;
+            var em = document.getElementById("e-mail").value;
+
+            var subj = document.getElementById("subject").value;
+            var txt = document.getElementById("pblm").value;
+            var body = txt + "<br><br>Email: " + em + "<br>Name: " + nm;
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "demoemail590@gmail.com",
+                Password: 'pteviupftpoqeasc',
+                To: "satwikagrawal2002@gmail.com",
+                From: 'demoemail590@gmail.com',
+                Subject: "message from " + nm + " about :" + subj,
+                Body: body
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        alert("Your Message Sent Successfully \n Thanky For Contacting ")
+                    }
+                    else {
+                        console.error(message);
+                        alert("There is error at sending message")
+                    }
+
+                }
+            );
+        }
+    </script>
 </body>
 
 </html>
