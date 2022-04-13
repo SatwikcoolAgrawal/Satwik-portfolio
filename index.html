@@ -281,14 +281,13 @@
         </div>
     </section>
 
-    <!-- <div class="pop-up" id="pop-up">
+    <div class="pop-up" id="pop-up">
         <div class="pop-content" id="pop-content">
-            <h2 class="head">!! Thank you !!</h2>
-            <hr>
-            <p class="pop-txt">Message Sent Successfully. We will get in touch soon</p>
-            <button class="close" id="close">Okay</button>
+            <button class="fa close" id="close"></button>
+            <h1>Hello Visitor</h1>
+            <p>I Hope We Like My Website</p>
         </div>
-    </div> -->
+    </div>
 
     <!-- footer-section -->
 
@@ -308,7 +307,7 @@
 
             var subj = document.getElementById("subject").value;
             var txt = document.getElementById("pblm").value;
-            var body = txt + "<br><br>Email: " + em + "<br>Name: " + nm;
+            var body = "Subject: " + subj + "<br>\t" + txt + "<br><br>name: " + nm + "<br>email: " + em;
             Email.send({
                 Host: "smtp.gmail.com",
                 Username: "demoemail590@gmail.com",

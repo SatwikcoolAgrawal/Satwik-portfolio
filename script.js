@@ -114,4 +114,12 @@ $(document).ready(function () {
         $("#btn1").removeClass("active");
     }
 
+    // pop opening
+    const close = document.getElementById('close');
+    const popbox = document.getElementById('pop-up');
+
+    close.addEventListener('click', () => {
+        popbox.classList.add('hide');
+    });
+
 });
