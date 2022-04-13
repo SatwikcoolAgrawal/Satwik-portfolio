@@ -255,31 +255,40 @@
                 </div>
                 <div class="column right">
                     <div class="txt">Message Me!</div>
-                    <form action="">
+                    <form>
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Full Name" name="name" required>
+                                <input type="text" id="name" class="name" placeholder="Full Name" name="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="E-mail" name="email" required>
+                                <input type="email" id="e-mail" class="e-mail" placeholder="E-mail" name="email"
+                                    required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" name="subject">
+                            <input type="text" id="subject" class="subject" placeholder="Subject" name="subject">
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="20" placeholder="Describe Problem.." name="description"
-                                required></textarea>
+                            <textarea cols="30" rows="20" placeholder="Describe Problem.." name="description" id="pblm"
+                                class="pblm" required></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Send Message</button>
+                            <button type="submit" id="submit" class="submit">Send Message</button>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="pop-up" id="pop-up">
+        <div class="pop-content" id="pop-content">
+            <h2 class="head">!! Thank you !!</h2>
+            <hr>
+            <p class="pop-txt">Message Sent Successfully. We will get in touch soon</p>
+            <button class="close" id="close">Okay</button>
+        </div>
+    </div>
 
     <!-- footer-section -->
 
