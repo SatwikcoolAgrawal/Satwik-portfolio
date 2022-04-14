@@ -69,10 +69,11 @@ $(document).ready(function () {
     // automatic profile sliding
     var nextSlide = function () {
         if (count < len) {
-            slide.style.transform = "translateX(" + -33.33 * count + "%)";
+            slide.style.transform = "translateX(" + -25 * count + "%)";
             $("#btn2").removeClass("active");
             $("#btn1").removeClass("active");
             $("#btn3").removeClass("active");
+            $("#btn4").removeClass("active");
             count++;
             $("#btn" + count).addClass("active");
 
@@ -82,6 +83,7 @@ $(document).ready(function () {
             $("#btn2").removeClass("active");
             $("#btn1").removeClass("active");
             $("#btn3").removeClass("active");
+            $("#btn4").removeClass("active");
             count = 1;
             $("#btn" + count).addClass("active");
 
@@ -99,19 +101,29 @@ $(document).ready(function () {
         $("#btn1").addClass("active");
         $("#btn2").removeClass("active");
         $("#btn3").removeClass("active");
+        $("#btn4").removeClass("active");
     }
 
     btn2.onclick = function () {
-        slide.style.transform = "translateX(-33.33%)";
+        slide.style.transform = "translateX(-25%)";
         $("#btn2").addClass("active");
         $("#btn1").removeClass("active");
         $("#btn3").removeClass("active");
+        $("#btn4").removeClass("active");
     }
     btn3.onclick = function () {
-        slide.style.transform = "translateX(-66.66%)";
+        slide.style.transform = "translateX(-50%)";
         $("#btn3").addClass("active");
         $("#btn2").removeClass("active");
         $("#btn1").removeClass("active");
+        $("#btn4").removeClass("active");
+    }
+    btn4.onclick = function () {
+        slide.style.transform = "translateX(-75%)";
+        $("#btn4").addClass("active");
+        $("#btn2").removeClass("active");
+        $("#btn1").removeClass("active");
+        $("#btn3").removeClass("active");
     }
 
     // pop opening

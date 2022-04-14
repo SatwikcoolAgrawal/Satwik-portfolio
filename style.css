@@ -797,19 +797,23 @@ section {
 }
 
 .pop-up .pop-content {
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    box-sizing: border-box;
     border: 10px double crimson;
     flex-direction: column;
     display: flex;
+    align-content: center;
     align-items: center;
     justify-content: center;
     position: relative;
     box-sizing: border-box;
     padding: 5px 12px;
     border-radius: 6px;
-    background: #fff;
     width: 900px;
     height: 600px;
     max-width: calc(100% - 30px);
+    max-height: calc(100% - 50px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -830,16 +834,13 @@ section {
     padding: 10px 20px;
 }
 
-.pop-up .pop-content hr {
-    height: 2px;
-    background: #111;
-}
 
 .pop-up .pop-content .close:before {
     content: "\f00d";
 }
 
 .pop-up .pop-content .close {
+    background: none;
     right: 20px;
     top: 10px;
     position: absolute;
