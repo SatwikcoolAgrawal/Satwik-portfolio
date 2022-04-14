@@ -257,7 +257,7 @@
                 </div>
                 <div class="column right">
                     <div class="txt">Message Me!</div>
-                    <form action="javascript:sendEmail()" method="post">
+                    <form onsubmit="sendEmail(); reset(); return false;" method="post">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" id="Name" class="Name" placeholder="Full Name" name="name" required>
@@ -310,14 +310,14 @@
 
             var subj = document.getElementById("subject").value;
             var txt = document.getElementById("pblm").value;
-            var body = "Subject: " + subj + "<br>\t" + txt + "<br><br>name: " + nm + "<br>email: " + em;
+            var body = "Subject: " + subj + "<br><br>" + txt + "<br><br>name: " + nm + "<br>email: " + em;
             Email.send({
                 Host: "smtp.gmail.com",
                 Username: "demoemail590@gmail.com",
                 Password: 'pteviupftpoqeasc',
                 To: "satwikagrawal2002@gmail.com",
                 From: 'demoemail590@gmail.com',
-                Subject: "message from " + nm + " about :" + subj,
+                Subject: "message from " + nm,
                 Body: body
             }).then(
                 message => {
@@ -330,6 +330,7 @@
                     }
 
                 }
+
             );
         }
     </script>
