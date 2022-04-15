@@ -1,7 +1,7 @@
 # Satwik-portfolio-Website
-## This is my personal porfolio website which shows my skills , interest my contact .
+## This is my personal porfolio website which shows my skills , interest my contact.
 
-website link :https://satwikcoolagrawal.github.io/Satwik-portfolio/
+:smile:Website link :https://satwikcoolagrawal.github.io/Satwik-portfolio/
 
 ## TechStack Used:
 - HTML
