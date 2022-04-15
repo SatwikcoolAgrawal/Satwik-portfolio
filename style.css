@@ -797,10 +797,10 @@ section {
 }
 
 .pop-up .pop-content {
-    background: rgb(255, 255, 255);
+    background: url('photos/pop-up\ back.jpg');
     background-size: cover;
     box-sizing: border-box;
-    border: 10px double crimson;
+    border: 10px double rgba(0, 0, 0, 0.868);
     flex-direction: column;
     display: flex;
     align-content: center;
@@ -809,7 +809,7 @@ section {
     position: relative;
     box-sizing: border-box;
     padding: 5px 12px;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 900px;
     height: 600px;
     max-width: calc(100% - 30px);
@@ -818,14 +818,16 @@ section {
 }
 
 .pop-up .pop-content h1 {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     font-size: 70px;
     font-family: 'Shizuru';
     font-weight: 700;
     text-transform: uppercase;
-    color: crimson;
+    color: rgb(255, 0, 51);
 }
 
 .pop-up .pop-content p {
+    text-shadow: 5px 2px 3px rgba(220, 20, 60, 0.377);
     margin-top: 40px;
     text-align: center;
     font-size: 34px;
