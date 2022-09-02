@@ -11,7 +11,37 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        // sending email through contact form 
+        function sendEmail() {
+            var nm = document.getElementById("Name").value;
+            var em = document.getElementById("e-mail").value;
 
+            var subj = document.getElementById("subject").value;
+            var txt = document.getElementById("pblm").value;
+            var body = "Subject: " + subj + "<br><br>" + txt + "<br><br>name: " + nm + "<br>email: " + em;
+            Email.send({
+                SecureToken: "03aa0893-10ea-4672-9584-b33ca0542468",
+                To: 'satwikagrawal2002@gmail.com',
+                From: "websitemailer002@gmail.com",
+                Subject: "message from " + nm,
+                Body: body
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        alert("Your Message Sent Successfully");
+                    }
+                    else {
+                        console.error(message);
+                        alert("There is error at sending message");
+                    }
+
+                }
+
+            );
+        }
+    </script>
 </head>
 
 <body>
@@ -254,7 +284,7 @@
                 </div>
                 <div class="column right">
                     <div class="txt">Message Me!</div>
-                    <form onsubmit="sendEmail(); reset(); return false;" method="post">
+                    <form onsubmit="sendEmail(); reset(); return false;" value="send mail" method="post">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" id="Name" class="Name" placeholder="Full Name" name="name" required>
@@ -298,41 +328,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
-
-    <script>
-        // sending email through contact form 
-        function sendEmail() {
-            var nm = document.getElementById("Name").value;
-            var em = document.getElementById("e-mail").value;
-
-            var subj = document.getElementById("subject").value;
-            var txt = document.getElementById("pblm").value;
-            var body = "Subject: " + subj + "<br><br>" + txt + "<br><br>name: " + nm + "<br>email: " + em;
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "demoemail590@gmail.com",
-                Password: 'sjvhxjqykccozhvp',
-                To: "satwikagrawal2002@gmail.com",
-                From: 'demoemail590@gmail.com',
-                Subject: "message from " + nm,
-                Body: body
-            }).then(
-                message => {
-                    if (message == 'OK') {
-                        alert("Your Message Sent Successfully \nThanks For Contacting ")
-                    }
-                    else {
-                        console.error(message);
-                        alert("There is error at sending message")
-                    }
-
-                }
-
-            );
-        }
-    </script>
 </body>
 
 </html>
