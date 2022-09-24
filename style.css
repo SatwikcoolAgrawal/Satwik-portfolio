@@ -282,7 +282,7 @@ section .title::after {
 }
 
 .about,
-.services,
+.interests,
 .skills,
 .contact,
 footer {
@@ -290,7 +290,7 @@ footer {
 }
 
 .about .about-content,
-.services .services-content,
+.interests .interests-content,
 .skills .skills-content,
 .contact .contact-content {
     display: flex;
@@ -319,7 +319,7 @@ section {
 }
 
 .about .title i,
-.services .title i,
+.interests .title i,
 .skills .title i,
 .contact .title i {
     font-size: 35px;
@@ -466,25 +466,25 @@ section {
     background: none;
 }
 
-/* services section */
-.services,
+/* interests section */
+.interests,
 .contact {
     color: white;
     background: url("photos/section\ background.jpg") no-repeat center;
     background-size: cover;
 }
 
-.services .title::before,
+.interests .title::before,
 .contact .title::before {
     background-color: white;
 }
 
-.services .title::after {
+.interests .title::after {
     background-color: #111;
     content: "What i Provide";
 }
 
-.services .services-content .card {
+.interests .interests-content .card {
     width: calc(33% - 20px);
     border-radius: 6px;
     height: max-content;
@@ -495,40 +495,40 @@ section {
     transition: all 0.3s ease;
 }
 
-.services .services-content .card .box {
+.interests .interests-content .card .box {
     transition: all 0.3s ease;
     height: fit-content;
 }
 
-.services .services-content .card .box p {
+.interests .interests-content .card .box p {
     text-align: justify;
 }
 
-.services .services-content {
+.interests .interests-content {
     align-items: start;
 }
 
-.services .services-content .card:hover {
+.interests .interests-content .card:hover {
     background: rgba(224, 61, 93, 0.774);
 }
 
 
 
-.services .services-content .card:hover .box {
+.interests .interests-content .card:hover .box {
     transform: scale(1.06);
 }
 
-.services .services-content .card i {
+.interests .interests-content .card i {
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
 
-.services .services-content .card:hover i {
+.interests .interests-content .card:hover i {
     color: white;
 }
 
-.services .services-content .card .txt {
+.interests .interests-content .card .txt {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -1029,7 +1029,7 @@ footer span span {
         flex: 100%;
     }
 
-    .services .services-content .card {
+    .interests .interests-content .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -1123,7 +1123,7 @@ footer span span {
         margin: 5px 0;
     }
 
-    .services .services-content .card {
+    .interests .interests-content .card {
         width: calc(100% - 5px);
         margin-bottom: 20px;
     }
